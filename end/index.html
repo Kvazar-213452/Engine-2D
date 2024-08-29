@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+    
+            .ad2 {
+                
+                background-color: #555 !important;
+            }
+        
+    </style>
+</head>
+<body>
+    <div id="panel" 
+style="
+background-color: #4c4c4c; 
+width: 800px; 
+height: 600px; 
+top: 100px; 
+left: 100px; 
+border-radius: 0px; 
+transform: 0;" 
+class="">
+
+    <div 
+        id="sss" 
+        class="ad2"
+        style="
+        position: absolute; 
+        background-color: #333; 
+        width: 173.5999755859375px; 
+        height: 124.79998779296875px; 
+        left: 591.2000244140625px; 
+        top: 218.39996337890625px; 
+        z-index: 0;
+        border-radius: 0px;
+        transform: rotate(0deg);">
+        </div><div 
+        id="sss1" 
+        class="ad2"
+        style="
+        position: absolute; 
+        background-color: #000; 
+        width: 318.4000244140623px; 
+        height: 154.39993286132812px; 
+        left: 159.6000244140625px; 
+        top: 187.99998168945314px; 
+        z-index: 0;
+        border-radius: 0px;
+        transform: rotate(0deg);">
+        </div>
+    </div>
+</body>
+<script>
+    
+function get_style_id(style, block) {
+    return parseInt(block.css(style), 10);
+}
+
+function get_block(id) {
+    return $(id);
+}
+
+
+    
+
+
+const moveAmount = 10;
+
+$(document).keydown(function(event) {
+    let kkk = get_block("#sss1");
+    let currentTop = get_style_id("top", kkk);
+    let currentLeft = get_style_id("left", kkk);
+
+    switch (event.key) {
+        case "w":
+            kkk.css("top", currentTop - moveAmount + "px");
+            break;
+        case "s":
+            kkk.css("top", currentTop + moveAmount + "px");
+            break;
+        case "a":
+            kkk.css("left", currentLeft - moveAmount + "px");
+            break;
+        case "d":
+            kkk.css("left", currentLeft + moveAmount + "px");
+            break;
+    }
+});
+
+
+
+</script>
+</html>

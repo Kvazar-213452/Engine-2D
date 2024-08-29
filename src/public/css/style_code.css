@@ -1,0 +1,84 @@
+/* Основні стилі редактора */
+.cm-s-mytheme.CodeMirror {
+    background-color: #2e2e2e; /* Темний фон */
+    color: #ffffff; /* Білий текст */
+}
+
+/* Номери рядків - ліва панель */
+.cm-s-mytheme .CodeMirror-linenumbers {
+    background-color: #333333; /* Фон для панелі номерів рядків */
+    color: #888888; /* Колір тексту для номерів рядків */
+    border-right: 1px solid #2e2e2e; /* Заміна білої лінії на темний фон */
+}
+
+.CodeMirror-gutters{
+    border: none;
+}
+
+/* Номери рядків */
+.cm-s-mytheme .CodeMirror-linenumber {
+    color: #888888; /* Колір тексту номерів рядків */
+}
+
+/* Коментарі */
+.cm-s-mytheme .cm-comment {
+    color: #6a9955;
+    font-style: italic;
+}
+
+/* Рядки */
+.cm-s-mytheme .cm-string {
+    color: #ce9178;
+}
+
+/* Ключові слова */
+.cm-s-mytheme .cm-keyword {
+    color: #569cd6;
+}
+
+/* Функції */
+.cm-s-mytheme .cm-def {
+    color: #dcdcaa;
+}
+
+/* Змінні */
+.cm-s-mytheme .cm-variable {
+    color: #9cdcfe;
+}
+
+/* Інші стилі (наприклад, числа, оператори, тощо) */
+.cm-s-mytheme .cm-number {
+    color: #b5cea8;
+}
+
+.cm-s-mytheme .cm-operator {
+    color: #d4d4d4;
+}
+
+/* Фокусований рядок (виділений поточний рядок) */
+.cm-s-mytheme .CodeMirror-activeline-background {
+    background-color: #444444; /* Фон для поточного рядка */
+}
+
+.CodeMirror-scroll{
+    font-weight: normal;
+}
+
+/* Колір фону виділеного тексту */
+.cm-s-mytheme .CodeMirror-selected {
+    background-color: #005c99; /* Темний синій фон */
+}
+
+/* Колір тексту виділеного тексту */
+.cm-s-mytheme .CodeMirror-selectedtext {
+    color: #ffffff; /* Білий текст на виділеному фоні */
+}
+
+/* Фон активного рядка (рядка, де знаходиться курсор) */
+.cm-s-mytheme .CodeMirror-activeline-background {
+    background-color: #333333; /* Темний сірий фон для активного рядка */
+}
+
+.CodeMirror{
+    height: 100%;
+}

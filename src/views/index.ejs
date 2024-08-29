@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Panel with Undo/Redo</title>
+    <script src="lib/jquery-3.6.4.min.js"></script>    
+    <script src="lib/interact.min.js"></script>
+    <script src="lib/codemirror.min.js"></script>
+    <script src="lib/javascript.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="lib/codemirror.min.css">
+    <link rel="stylesheet" href="css/style_code.css">
+    <style id="style_ful"></style>
+</head>
+<body>
+    <div class="menu_top">
+        <button onclick="openModal('modal1')" class="button_menu_top">Create block</button>
+        <button onclick="open_file()" class="button_menu_top">Project open</button>
+        <button onclick="save_file()" class="button_menu_top">Project save</button>
+        <button onclick="open_page_class()" class="button_menu_top">Class</button>
+        <button onclick="open_page_code()" class="button_menu_top">Code</button>
+        <button onclick="open_page_main()" class="button_menu_top">Main</button>
+        <div class="tex_center">
+            <p onclick="start()" class="float_lef">Start</p>
+            <p onclick="stop()" class="float_lef">Stop</p>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu_menu">
+            <button onclick="open_page_code_tree(1)" class="button_menu_menu">Tree</button>
+            <button onclick="open_page_code_tree(0)" class="button_menu_menu">Code</button>
+        </div>
+        <div id="tree"></div>
+        <div id="code_tree">
+            <br><br>
+            <input class="input_tilem_tree" placeholder="Name" id="name_code" type="text">
+            <br>
+            <button class="button_tree_d" onclick="save_page_code()">Save</button>
+            <button class="button_tree_d" onclick="clean_page_code()">Clean up</button>
+            <br><br><br>
+            <div id="lll">
+
+            </div>
+        </div>
+    </div>
+    <div class="console">
+        <div id="console_t"></div>
+        <div class="consoel_info">
+            <div class="padding">
+                <p class="sector">Index code page: <span id="code_select"></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="inspector">
+        <%- include('add/inspector') %>
+    </div>
+
+    <div id="panel"></div>
+
+    <div id="code_page">
+        <textarea id="textarea"></textarea>
+    </div>
+    <div id="class">
+        <br>
+        <input class="input_tilem_tree" placeholder="Name" id="name_style" type="text">
+        <button class="style_apdata" onclick="render_style_ful()">Update</button>
+        <br><br>
+        <div id="style_render"></div>
+    </div>
+
+    <%- include('add/modal') %>
+
+    <script src="js/start.js"></script>
+    <script src="js/func.js"></script>
+    <script src="js/panel.js"></script>
+    <script src="js/block.js"></script>
+    <script src="js/keyboard.js"></script>
+    <script src="js/mause.js"></script>
+    <script src="js/instector.js"></script>
+    <script src="js/server/post.js"></script>
+    <script src="js/page/code.js"></script>
+    <script src="js/page/style.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/world.js"></script>
+</body>
+</html>
