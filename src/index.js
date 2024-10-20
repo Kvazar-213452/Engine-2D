@@ -6,10 +6,13 @@ const ejs = require('ejs');
 
 const app = express();
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+const viewsPath = path.join(process.cwd(), 'src/views');
+const publicPath = path.join(process.cwd(), 'src/public');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'ejs');
+app.set('views', viewsPath);
+
+app.use(express.static(publicPath));
 app.use(express.json());
 
 app.get('/', (req, res) => {

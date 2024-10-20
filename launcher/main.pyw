@@ -23,7 +23,7 @@ def route_1():
     with open('project.json', 'r') as file:
         projects = json.load(file)
     projects_js = "let prg = " + json.dumps(projects) + ";"
-    return render_template('index.html', json_add=json_add, projects=projects_js)
+    return render_template('index.jinja', json_add=json_add, projects=projects_js)
 
 
 @app.route('/create', methods=['POST'])
