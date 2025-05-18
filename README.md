@@ -4,6 +4,9 @@ The project is built with Node.js and has a web interface. It is a simple test e
 
 ### Run
 ```
-src/ npm i
-src/ npm start
+npm i
+npm run dev
 ```
+
+### img
+![img](images/img.png)
